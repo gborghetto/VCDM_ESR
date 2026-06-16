@@ -1,0 +1,160 @@
+# Function Index Mapping
+# Format: new_index | original_line | expression
+#======================================================================
+
+  0 | Line   0 | sqrt(x) + x
+  1 | Line   1 | exp(pow(x,x))
+  2 | Line   2 | x*exp(-x)
+  3 | Line   3 | Abs(log(x))
+  4 | Line   4 | pow(x,(2*x))
+  5 | Line   5 | exp(exp(x**2))
+  6 | Line   6 | exp(log(x)**2)
+  7 | Line   7 | log(x**4)
+  8 | Line   8 | pow(x,(x**2))
+  9 | Line   9 | a0 + x**2
+ 10 | Line  10 | pow(Abs(a0),(x/2))
+ 11 | Line  12 | a0 + sqrt(x)
+ 12 | Line  13 | exp(x**2)
+ 13 | Line  15 | log(x*Abs(1/a0))
+ 14 | Line  16 | x + exp(x)
+ 15 | Line  17 | exp(x**4)
+ 16 | Line  18 | x/log(x)
+ 17 | Line  19 | pow(x,(sqrt(x)))
+ 18 | Line  20 | exp(x)*Abs(a0)
+ 19 | Line  23 | x**2*Abs(a0)
+ 20 | Line  24 | pow(x,log(x))
+ 21 | Line  26 | a0*x**2
+ 22 | Line  27 | pow(x,(3/2))
+ 23 | Line  28 | x - exp(x)
+ 24 | Line  29 | sqrt(Abs(log(x**2)))
+ 25 | Line  30 | 1/x
+ 26 | Line  31 | pow(Abs(a0),(x**2))
+ 27 | Line  32 | log(Abs(log(Abs(log(x)))))
+ 28 | Line  33 | a0/log(x)
+ 29 | Line  34 | log(Abs(a0 - x))
+ 30 | Line  35 | exp(sqrt(Abs(log(x))))
+ 31 | Line  36 | exp(x**2/2)
+ 32 | Line  37 | log(x**2)**2
+ 33 | Line  38 | exp(pow(x,(1/4)))
+ 34 | Line  39 | -sqrt(x) + x
+ 35 | Line  40 | 2*x
+ 36 | Line  41 | sqrt(Abs(a0 - x))
+ 37 | Line  42 | log(x)
+ 38 | Line  43 | -x + log(x)
+ 39 | Line  44 | a0/x**2
+ 40 | Line  45 | exp(exp(x)/2)
+ 41 | Line  46 | pow(x,Abs(a0))
+ 42 | Line  47 | -x + Abs(a0)
+ 43 | Line  49 | exp(x)/x
+ 44 | Line  50 | sqrt(x)
+ 45 | Line  51 | a0 - x
+ 46 | Line  52 | x + log(x)
+ 47 | Line  53 | -x**2 + x
+ 48 | Line  54 | 4*x**2
+ 49 | Line  55 | log(2*x)
+ 50 | Line  57 | sqrt(2)*sqrt(x)
+ 51 | Line  58 | x**4
+ 52 | Line  59 | exp(2*x**2)
+ 53 | Line  60 | log(Abs(log(x**2)))
+ 54 | Line  61 | a0*exp(-x)
+ 55 | Line  62 | x/sqrt(Abs(a0))
+ 56 | Line  63 | x + Abs(a0)
+ 57 | Line  64 | log(Abs(log(x)))**2
+ 58 | Line  65 | x/2
+ 59 | Line  66 | pow(x,(1/8))
+ 60 | Line  67 | Abs(a0)/x
+ 61 | Line  69 | pow(Abs(a0),log(x))
+ 62 | Line  70 | pow(Abs(log(x)),a0)
+ 63 | Line  72 | x**2
+ 64 | Line  73 | x*Abs(a0)
+ 65 | Line  74 | sqrt(Abs(log(sqrt(x))))
+ 66 | Line  75 | pow(Abs(a0),exp(x))
+ 67 | Line  76 | log(x)**4
+ 68 | Line  77 | a0 + log(x)
+ 69 | Line  78 | exp(pow(Abs(a0),x))
+ 70 | Line  79 | exp(x)
+ 71 | Line  80 | log(pow(x,x))
+ 72 | Line  81 | exp(sqrt(x)/2)
+ 73 | Line  82 | a0/x
+ 74 | Line  83 | a0*log(x)
+ 75 | Line  84 | x**2 - x
+ 76 | Line  85 | pow(Abs(a0),(2*x))
+ 77 | Line  86 | exp(2*exp(x))
+ 78 | Line  88 | pow(Abs(a0),x)
+ 79 | Line  89 | (a0 - x)**2
+ 80 | Line  90 | log(pow(Abs(a0),x))
+ 81 | Line  92 | exp(-x)*Abs(a0)
+ 82 | Line  93 | pow(x,exp(x))
+ 83 | Line  94 | sqrt(x)*sqrt(Abs(1/a0))
+ 84 | Line  95 | pow(x,(x/2))
+ 85 | Line  96 | (a0 + x)**2
+ 86 | Line  98 | exp(2*sqrt(x))
+ 87 | Line 100 | Abs(a0)/x**2
+ 88 | Line 101 | a0 - log(x)
+ 89 | Line 102 | log(pow(x,(1/4)))
+ 90 | Line 103 | x*exp(x)
+ 91 | Line 104 | x**2 + x
+ 92 | Line 105 | 1/sqrt(x)
+ 93 | Line 106 | log(x)/x
+ 94 | Line 107 | x**3
+ 95 | Line 108 | x**8
+ 96 | Line 109 | exp(a0/x)
+ 97 | Line 110 | a0 - sqrt(x)
+ 98 | Line 111 | exp(exp(sqrt(x)))
+ 99 | Line 113 | -x + exp(x)
+100 | Line 114 | x*log(x)
+101 | Line 115 | exp(2*x)
+102 | Line 116 | pow(x,a0)
+103 | Line 117 | pow(Abs(a0),(sqrt(x)))
+104 | Line 118 | exp(4*x)
+105 | Line 119 | Abs(a0)/sqrt(x)
+106 | Line 120 | x - log(x)
+107 | Line 121 | a0 + x
+108 | Line 122 | a0 - exp(x)
+109 | Line 123 | log(x**2)
+110 | Line 124 | sqrt(Abs(log(Abs(log(x)))))
+111 | Line 125 | log(sqrt(x))**2
+112 | Line 126 | exp(x/4)
+113 | Line 127 | pow(Abs(log(x)),(1/4))
+114 | Line 128 | sqrt(x) - x
+115 | Line 129 | exp(a0*x)
+116 | Line 130 | a0*exp(x)
+117 | Line 131 | log(sqrt(Abs(log(x))))
+118 | Line 132 | log(log(x)**2)
+119 | Line 133 | exp(pow(x,a0))
+120 | Line 135 | a0 + exp(x)
+121 | Line 136 | log(pow(x,a0))
+122 | Line 137 | sqrt(x)*Abs(a0)
+123 | Line 138 | x - Abs(a0)
+124 | Line 139 | a0/sqrt(x)
+125 | Line 140 | a0*sqrt(x)
+126 | Line 141 | exp(exp(2*x))
+127 | Line 142 | a0 - x**2
+128 | Line 143 | exp(exp(exp(x)))
+129 | Line 144 | exp(exp(x/2))
+130 | Line 145 | pow(Abs(log(x)),x)
+131 | Line 146 | a0*x
+132 | Line 147 | x
+133 | Line 148 | log(Abs(log(sqrt(x))))
+134 | Line 150 | x/log(Abs(a0))
+
+#======================================================================
+# Skipped functions (no dependence on x):
+#======================================================================
+
+Line  11 | SKIPPED | Abs(a0)
+Line  14 | SKIPPED | pow(Abs(a0),(1/4))
+Line  21 | SKIPPED | 0
+Line  22 | SKIPPED | log(Abs(log(Abs(a0))**2))
+Line  25 | SKIPPED | exp(Abs(a0))
+Line  48 | SKIPPED | a0/sqrt(Abs(a1))
+Line  56 | SKIPPED | zoo
+Line  68 | SKIPPED | E
+Line  71 | SKIPPED | 1
+Line  87 | SKIPPED | exp(exp(Abs(a0)))
+Line  91 | SKIPPED | sqrt(Abs(log(Abs(a0))**2))
+Line  97 | SKIPPED | pow(Abs(a0),(1/8))
+Line  99 | SKIPPED | exp(Abs(a0)/2)
+Line 112 | SKIPPED | exp(2*Abs(a0))
+Line 134 | SKIPPED | a0
+Line 149 | SKIPPED | exp(pow(Abs(a0),(1/4)))

@@ -1,0 +1,62 @@
+pow(x,(1/4))
+x
+exp(x/2)
+sqrt(Abs(log(x)))
+x
+x**4
+exp(2*x)
+log(x)**2
+exp(sqrt(x))
+exp(x**2)
+exp(exp(x))
+x
+log(sqrt(x))
+log(x**2)
+x
+log(Abs(log(x)))
+pow(Abs(a0),(1/4))
+Abs(a0)
+exp(a0/2)
+sqrt(Abs(log(Abs(a0))))
+Abs(a0)
+a0**4
+exp(2*a0)
+log(Abs(a0))**2
+exp(sqrt(Abs(a0)))
+exp(a0**2)
+exp(exp(a0))
+Abs(a0)
+log(sqrt(Abs(a0)))
+log(a0**2)
+a0
+log(Abs(log(Abs(a0))))
+2*x
+x**2
+0
+1
+pow(x,x)
+a0 + x
+a0*x
+-a0 + x
+x/a0
+pow(x,a0)
+a0 + x
+a0*x
+a0 - x
+a0/x
+pow(Abs(a0),x)
+a0 + a1
+a0*a1
+a0 - a1
+a0/a1
+pow(Abs(a0),a1)
+exp(x/2)
+exp(2*x)
+log(x)/2
+2*log(x)
+exp(a0/2)
+exp(2*a0)
+log(Abs(a0))/2
+2*log(Abs(a0))
+2*x
+0

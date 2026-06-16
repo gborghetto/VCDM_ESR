@@ -1,0 +1,6 @@
+exp(x)
+x**2
+a0
+sqrt(x)
+Abs(a0)
+log(x)

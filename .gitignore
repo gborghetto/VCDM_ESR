@@ -1,0 +1,12 @@
+*SOURCES.txt
+.vscode/settings.json
+*.egg
+*PKG-INFO
+*SOURCES.txt
+*chains/
+*.h5
+*.pdf
+*.pyc
+*.so
+*.ipynb
+*.o

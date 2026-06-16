@@ -1,0 +1,8 @@
+['sqrt_abs' 'x']
+['square' 'x']
+['exp' 'x']
+['log_abs' 'x']
+['sqrt_abs' 'a0']
+['square' 'a0']
+['exp' 'a0']
+['log_abs' 'a0']

@@ -1,0 +1,293 @@
+theory:
+  classy:
+    path: /Users/giuliaborghetto/OneDriveSwanseaUniversity/VCDM/class_gen4_w_wa_vcdm-3.2.1
+    speed: 0.2
+    stop_at_error: false
+    extra_args:
+      gauge: newtonian
+      fluid_equation_of_state: CLP
+      tol_background_integration: 1.0e-10
+      tol_perturbations_integration: 1.0e-09
+    ignore_obsolete: false
+    use_renames: false
+    renames:
+      As: A_s
+      ns: n_s
+      nrun: alpha_s
+      nrunrun: beta_s
+      nt: n_t
+      ntrun: alpha_t
+      rdrag: rs_drag
+      omegak: Omega_k
+      omegal: Omega_Lambda
+      w: w0_fld
+      wa: wa_fld
+      omegabh2: omega_b
+      omegab: Omega_b
+      omegach2: omega_cdm
+      omegac: Omega_cdm
+      omegam: Omega_m
+      omegan: Omega_nu
+      tau: tau_reio
+      zrei: z_reio
+      deltazrei: reionization_width
+      helium_redshift: helium_fullreio_redshift
+      helium_delta_redshift: helium_fullreio_width
+      yhe: YHe
+      yheused: YHe
+    version: v3.2.1
+    input_params:
+    - w0_fld
+    - wa_fld
+    - omega_b
+    - omega_cdm
+    - A_s
+    - n_s
+    - tau_reio
+    - H0
+    output_params:
+    - rdrag
+    - sigma8
+    - theta_s_100
+likelihood:
+  planck_2018_lowl.TT:
+    lmin: 2
+    lmax: 29
+    type: CMB
+    aliases:
+    - lowT
+    speed: -1
+    stop_at_error: false
+    version: null
+    input_params:
+    - A_planck
+    output_params: []
+  planck_2018_lowl.EE:
+    type: CMB
+    aliases:
+    - lowE
+    speed: -1
+    stop_at_error: false
+    version: null
+    input_params:
+    - A_planck
+    output_params: []
+  planck_2018_highl_plik.TTTEEE_lite_native:
+    path: null
+    dataset_file: plik_lite_v22.dataset
+    dataset_params:
+      use_cl: tt te ee
+    aliases:
+    - plikHM_TTTEEE
+    speed: 200
+    type: CMB
+    stop_at_error: false
+    version: null
+    input_params:
+    - A_planck
+    output_params: []
+  planck_2018_lensing.native:
+    path: null
+    dataset_file: lensing/2018/smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8.dataset
+    dataset_params: null
+    l_max: null
+    aliases:
+    - lensing
+    speed: 50
+    type: CMB
+    map_separator: x
+    stop_at_error: false
+    version: null
+    input_params:
+    - A_planck
+    output_params: []
+  bao.desi_dr2.desi_bao_all:
+    path: null
+    measurements_file: bao_data/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt
+    cov_file: bao_data/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt
+    rs_fid: 1
+    aliases:
+    - BAO
+    speed: 2000
+    type: BAO
+    rs_rescale: null
+    prob_dist: null
+    invcov_file: null
+    redshift: null
+    observable_1: null
+    observable_2: null
+    observable_3: null
+    grid_file: null
+    stop_at_error: false
+    version: null
+    input_params: []
+    output_params: []
+params:
+  w0_fld:
+    prior:
+      min: -2.0
+      max: 2.0
+    ref:
+      dist: norm
+      loc: -0.5
+      scale: 0.2
+    proposal: 0.05
+    latex: w_0
+    renames:
+    - w
+  wa_fld:
+    prior:
+      min: -2.0
+      max: 2.0
+    ref:
+      dist: norm
+      loc: -1.0
+      scale: 0.5
+    proposal: 0.05
+    latex: w_a
+    renames:
+    - wa
+  omega_b:
+    prior:
+      min: 0.021
+      max: 0.023
+    ref:
+      dist: norm
+      loc: 0.022633
+      scale: 0.001
+    proposal: 0.0001
+    renames:
+    - omegabh2
+  omega_cdm:
+    prior:
+      min: 0.11
+      max: 0.13
+    ref:
+      dist: norm
+      loc: 0.1184
+      scale: 0.01
+    proposal: 0.0001
+    renames:
+    - omegach2
+  logA:
+    prior:
+      min: 2.98
+      max: 3.1
+    ref:
+      dist: norm
+      loc: 3.040776555
+      scale: 0.001
+    proposal: 0.001
+    latex: r'\log(10^{10} A_\mathrm{s})'
+    drop: true
+  A_s:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    latex: r'A_\mathrm{s}'
+    derived: true
+    renames:
+    - As
+  n_s:
+    prior:
+      min: 0.94
+      max: 0.99
+    ref:
+      dist: norm
+      loc: 0.9652909209
+      scale: 0.002
+    proposal: 0.002
+    latex: r'n_\mathrm{s}'
+    renames:
+    - ns
+  tau_reio:
+    latex: r'\tau_\mathrm{reio}'
+    prior:
+      min: 0.02
+      max: 0.08
+    ref:
+      dist: norm
+      loc: 0.05546101493
+      scale: 0.003
+    proposal: 0.003
+    renames:
+    - tau
+  H0:
+    prior:
+      min: 60
+      max: 72
+    ref:
+      dist: norm
+      loc: 66.0
+      scale: 1.0
+    proposal: 0.5
+  chi2__BAO:
+    latex: \chi^2_\mathrm{BAO}
+    derived: true
+  chi2__CMB:
+    latex: \chi^2_\mathrm{CMB}
+    derived: true
+  chi2_total:
+    derived: 'lambda chi2__BAO, chi2__CMB: chi2__BAO + chi2__CMB '
+    latex: \chi^2_\mathrm{total}
+  omega_m:
+    latex: \Omega_\mathrm{m}
+    derived: 'lambda omega_cdm, omega_b, H0: (omega_cdm + omega_b) / (H0 / 100.0)**2'
+  rdrag:
+    latex: r_\mathrm{drag}
+    derived: true
+    renames:
+    - rs_drag
+  hrd:
+    latex: hr_d
+    derived: 'lambda H0, rdrag: H0/100 * rdrag'
+  sigma8:
+    latex: \sigma_8
+    derived: true
+  theta_s_100:
+    latex: 100\theta_s
+    derived: true
+  A_planck:
+    prior:
+      dist: norm
+      loc: 1
+      scale: 0.0025
+    ref:
+      dist: norm
+      loc: 1
+      scale: 0.002
+    proposal: 0.0005
+    latex: y_\mathrm{cal}
+    renames: calPlanck
+sampler:
+  mcmc:
+    burn_in: 0
+    max_tries: 40d
+    covmat: auto
+    covmat_params: null
+    proposal_scale: 1.9
+    output_every: 60s
+    learn_every: 40d
+    temperature: 1
+    learn_proposal: true
+    learn_proposal_Rminus1_max: 2.0
+    learn_proposal_Rminus1_max_early: 30.0
+    learn_proposal_Rminus1_min: 0.0
+    max_samples: .inf
+    Rminus1_stop: 0.05
+    Rminus1_cl_stop: 0.2
+    Rminus1_cl_level: 0.95
+    Rminus1_single_split: 4
+    measure_speeds: true
+    oversample_power: 0.4
+    oversample_thin: true
+    drag: false
+    blocking: null
+    callback_function: null
+    callback_every: null
+    seed: null
+    check_every: null
+    oversample: null
+    drag_limits: null
+    fallback_covmat_scale: 4
+    version: null
+output: test
+version: 3.5.7

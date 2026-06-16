@@ -1,0 +1,28 @@
+exp(x**2)
+x
+pow(x,a0)
+x**4
+sqrt(Abs(log(x)))
+exp(sqrt(x))
+x**2
+log(sqrt(x))
+Abs(a0)
+pow(Abs(a0),(1/4))
+exp(x/2)
+a0 - x
+a0/x
+pow(x,(1/4))
+exp(2*x)
+a0 + x
+a0
+a0*x
+log(x**2)
+exp(exp(x))
+2*x
+pow(Abs(a0),x)
+1
+log(Abs(log(x)))
+pow(x,x)
+log(x)**2
+0
+exp(Abs(a0))
