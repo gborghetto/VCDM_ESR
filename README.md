@@ -13,13 +13,13 @@ The code extends the standard CLASS Boltzmann solver to support VCDM, a minimall
 The SPIDER pipeline consists of three stages:
 
 **1. Function Generation**
-Candidate analytic expressions for w(a) are generated using the [ESR generation module](https://github.com/DeaglanBartlett/ESR/tree/main/esr/generation), which exhaustively enumerates all analytic expressions of a given complexity. The operator basis and complexity are specified in `duplicate_checker.py` in the ESR generation module — running this script produces a `unique_equations.txt` file containing all unique, non-redundant candidate expressions. The file `C_generator.py` in the `class_functions_generation/` folder then reads this file and converts the expressions into a CLASS-compatible format, generating `generated_functions.c`, `generated_functions.h`, and `function_index_mapping.txt`. These files define the function library that CLASS loads and evaluates throughout the pipeline.
+Candidate analytic expressions for w(a) are generated using the [ESR generation module](https://github.com/DeaglanBartlett/ESR/tree/main/esr/generation), which exhaustively enumerates all analytic expressions of a given complexity. The operator basis and complexity are specified in `duplicate_checker.py` in the ESR generation module — running this script produces a `unique_equations.txt` file containing all unique candidate expressions. The file `C_generator.py` in the `class_functions_generation/` folder then reads this file and converts the expressions into a CLASS-compatible format, generating `generated_functions.c`and `generated_functions.h`. These files define the function library that CLASS loads and evaluates throughout the pipeline.
 
-Once `C_generator.py` has been run, the generated C files need to be compiled into a shared library so that CLASS can load and call the functions at runtime. From the `ESR_tests/` folder, run:
+Once `C_generator.py` has been run, the generated C files need to be compiled into a shared library so that CLASS can load and call the functions at runtime. From the `class_functions_generation/` folder, run:
 
 ```bash
 gcc -shared -fPIC -o generated_functions.dylib generated_functions.c -lm
-cd source
+cd ../source
 gcc -I../include -o generated_functions.dylib generated_functions.c -lm -dynamiclib
 ln -sf generated_functions.dylib generated_functions.so
 ```
